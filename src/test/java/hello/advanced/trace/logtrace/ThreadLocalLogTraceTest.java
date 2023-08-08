@@ -1,16 +1,14 @@
 package hello.advanced.trace.logtrace;
 
 import hello.advanced.trace.TraceStatus;
-import hello.advanced.trace.hellotrace.HelloTraceV2;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+class ThreadLocalLogTraceTest {
 
-class FieldLogTraceTest {
-
-    FieldLogTrace trace = new FieldLogTrace();
+    ThreadLocalLogTrace trace = new ThreadLocalLogTrace();
 
     @Test
+
     public void begin_end_level2() throws Exception {
         TraceStatus status1 = trace.begin("hello1");
         TraceStatus status2 = trace.begin("hello2");
